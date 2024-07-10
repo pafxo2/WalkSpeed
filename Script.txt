@@ -1,0 +1,120 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local TextButton_2 = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local TextButton_3 = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.452755898, 0, 0.191066995, 0)
+Frame.Size = UDim2.new(0, 217, 0, 306)
+Frame.Active = true
+Frame.Draggable = true
+
+UICorner.CornerRadius = UDim.new(0, 20)
+UICorner.Parent = Frame
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(117, 191, 97)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.129032254, 0, 0.281045765, 0)
+TextButton.Size = UDim2.new(0, 161, 0, 28)
+TextButton.Font = Enum.Font.FredokaOne
+TextButton.Text = "WalkSpeed 20"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 14.000
+
+UICorner_2.CornerRadius = UDim.new(0, 20)
+UICorner_2.Parent = TextButton
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.110599078, 0, 0.0490196086, 0)
+TextLabel.Size = UDim2.new(0, 168, 0, 38)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "Speed GUI"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(117, 191, 97)
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0.129032254, 0, 0.454248369, 0)
+TextButton_2.Size = UDim2.new(0, 161, 0, 28)
+TextButton_2.Font = Enum.Font.FredokaOne
+TextButton_2.Text = "WalkSpeed 50"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextSize = 14.000
+
+UICorner_3.CornerRadius = UDim.new(0, 20)
+UICorner_3.Parent = TextButton_2
+
+TextButton_3.Parent = Frame
+TextButton_3.BackgroundColor3 = Color3.fromRGB(117, 191, 97)
+TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.BorderSizePixel = 0
+TextButton_3.Position = UDim2.new(0.129032254, 0, 0.653594792, 0)
+TextButton_3.Size = UDim2.new(0, 161, 0, 28)
+TextButton_3.Font = Enum.Font.FredokaOne
+TextButton_3.Text = "WalkSpeed 100"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextSize = 14.000
+
+UICorner_4.CornerRadius = UDim.new(0, 20)
+UICorner_4.Parent = TextButton_3
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.175115213, 0, 0.882352948, 0)
+TextLabel_2.Size = UDim2.new(0, 140, 0, 19)
+TextLabel_2.Font = Enum.Font.FredokaOne
+TextLabel_2.Text = "Made by pafxo"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+
+local plr = game.Players.LocalPlayer
+local char = plr.Character or plr.CharacterAdded:Wait()
+local hum = char:WaitForChild("Humanoid")
+TextButton_3.MouseButton1Up:Connect(function()
+	hum.WalkSpeed = 100
+end)
+
+TextButton_2.MouseButton1Up:Connect(function()
+	hum.WalkSpeed = 50
+end)
+
+TextButton.MouseButton1Up:Connect(function()
+	hum.WalkSpeed = 20
+end)
