@@ -25,30 +25,31 @@ local Sky_2 = Instance.new("TextButton")
 local UICorner_9 = Instance.new("UICorner")
 local Sky_3 = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
-local Sky_4 = Instance.new("TextButton")
-local UICorner_11 = Instance.new("UICorner")
 local Close = Instance.new("TextButton")
-local UICorner_12 = Instance.new("UICorner")
+local UICorner_11 = Instance.new("UICorner")
 local franko = Instance.new("Frame")
-local UICorner_13 = Instance.new("UICorner")
+local UICorner_12 = Instance.new("UICorner")
 local TextLabel_3 = Instance.new("TextLabel")
 local TextBox = Instance.new("TextBox")
+local UICorner_13 = Instance.new("UICorner")
 local UICorner_14 = Instance.new("UICorner")
-local UICorner_15 = Instance.new("UICorner")
 local TextButton = Instance.new("TextButton")
-local UICorner_16 = Instance.new("UICorner")
+local UICorner_15 = Instance.new("UICorner")
 
 --Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.462204665, 0, 0.292803973, 0)
-Frame.Size = UDim2.new(0, 271, 0, 366)
+Frame.Size = UDim2.new(0, 271, 0, 367)
+Frame.Draggable = true
+Frame.Active = true
 
 UICorner.Parent = Frame
 
@@ -64,7 +65,7 @@ TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(-0.106802255, 0, -0.00218573678, 0)
+TextLabel.Position = UDim2.new(-0.195691139, 0, -0.113296852, 0)
 TextLabel.Size = UDim2.new(0, 200, 0, 50)
 TextLabel.Font = Enum.Font.SourceSansBold
 TextLabel.Text = "Pafxos Menu"
@@ -76,7 +77,7 @@ TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.BackgroundTransparency = 1.000
 TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0.484228522, 0, -0.379962832, 0)
+TextLabel_2.Position = UDim2.new(0.543487787, 0, -0.446629494, 0)
 TextLabel_2.Size = UDim2.new(0, 165, 0, 79)
 TextLabel_2.Font = Enum.Font.SourceSansBold
 TextLabel_2.Text = "By pafxo"
@@ -187,33 +188,19 @@ Sky_3.TextSize = 14.000
 
 UICorner_10.Parent = Sky_3
 
-Sky_4.Name = "Sky"
-Sky_4.Parent = Frame
-Sky_4.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
-Sky_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Sky_4.BorderSizePixel = 0
-Sky_4.Position = UDim2.new(0.243543118, 0, 0.767759562, 0)
-Sky_4.Size = UDim2.new(0, 136, 0, 32)
-Sky_4.Font = Enum.Font.SourceSansBold
-Sky_4.Text = "Discord"
-Sky_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-Sky_4.TextSize = 14.000
-
-UICorner_11.Parent = Sky_4
-
 Close.Name = "Close"
 Close.Parent = Frame
 Close.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
 Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Close.BorderSizePixel = 0
-Close.Position = UDim2.new(0.339484066, 0, 0.909836054, 0)
+Close.Position = UDim2.new(0.339484066, 0, 0.77868855, 0)
 Close.Size = UDim2.new(0, 85, 0, 22)
 Close.Font = Enum.Font.SourceSansBold
 Close.Text = "Close"
 Close.TextColor3 = Color3.fromRGB(255, 255, 255)
 Close.TextSize = 14.000
 
-UICorner_12.Parent = Close
+UICorner_11.Parent = Close
 
 franko.Name = "franko"
 franko.Parent = ScreenGui
@@ -223,8 +210,9 @@ franko.BorderColor3 = Color3.fromRGB(0, 0, 0)
 franko.BorderSizePixel = 0
 franko.Position = UDim2.new(0.431496054, 0, 0.239454091, 0)
 franko.Size = UDim2.new(0, 345, 0, 452)
+franko.Visible = false
 
-UICorner_13.Parent = franko
+UICorner_12.Parent = franko
 
 TextLabel_3.Parent = franko
 TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -251,9 +239,9 @@ TextBox.Text = "Key here"
 TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.TextSize = 14.000
 
-UICorner_14.Parent = TextBox
+UICorner_13.Parent = TextBox
 
-UICorner_15.Parent = franko
+UICorner_14.Parent = franko
 
 TextButton.Parent = franko
 TextButton.BackgroundColor3 = Color3.fromRGB(146, 255, 74)
@@ -269,12 +257,45 @@ TextButton.TextScaled = true
 TextButton.TextSize = 14.000
 TextButton.TextWrapped = true
 
-UICorner_16.Parent = TextButton
+UICorner_15.Parent = TextButton
 
 -- Scripts:
 
+local function ESHU_fake_script() -- Sky1.LocalScript 
+	local script = Instance.new('LocalScript', Sky1)
 
+	
+end
+coroutine.wrap(ESHU_fake_script)()
+local function DJJJN_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
 
+	script.Parent.MouseButton1Click:Connect(function()
+		local screen = script.Parent.Parent.Parent.Parent.ScreenGui
+		screen.Enabled = false
+	end)
+	
+	
+end
+coroutine.wrap(DJJJN_fake_script)()
+local function ZEZMB_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local box = script.Parent.Parent.Parent.franko.TextLabel.TextBox
+		if box.Text == "E36N9OPAFXO8IOPS72S" then
+			script.Parent.Parent.Parent.franko:Destroy()
+			
+		
+		else
+		
+		local player = game.Players.LocalPlayer
+		player:Kick("Wrong Key")
+		end
+		
+	end)
+end
+coroutine.wrap(ZEZMB_fake_script)()
 
 print("PAFXOS MENU INJECTED")
 print("PAFXOS MENU INJECTED")
@@ -315,120 +336,7 @@ Sky_3.MouseButton1Click:Connect(function()
 end)
 
 
-
 Close.MouseButton1Click:Connect(function()
 	ScreenGui.Enabled = false
 end)
 
-
-
-local function JJDFJT_fake_script() -- Sky1.LocalScript 
-	local script = Instance.new('LocalScript', Sky1)
-
-	
-end
-coroutine.wrap(JJDFJT_fake_script)()
-local function MOUWPVK_fake_script() -- Sky_4.LocalScript 
-	local script = Instance.new('LocalScript', Sky_4)
-
-	script.Parent.MouseButton1Up:Connect(function()
-		local n = script.Parent.Parent.Parent.Frame.Frame.Some
-		n.BackgroundTransparency = 1
-		n.TextTransparency = 1
-		wait(0.1)
-		n.BackgroundTransparency = 0.9
-		n.TextTransparency = 0.9
-		wait(0.1)
-		n.BackgroundTransparency = 0.8
-		n.TextTransparency = 0.8
-		wait(0.1)
-		n.BackgroundTransparency = 0.7
-		n.TextTransparency = 0.7
-		wait(0.1)
-		n.BackgroundTransparency = 0.6
-		n.TextTransparency = 0.6
-		wait(0.1)
-		n.BackgroundTransparency = 0.5
-		n.TextTransparency = 0.5
-		wait(0.1)
-		n.BackgroundTransparency = 0.4
-		n.TextTransparency = 0.4
-		wait(0.1)
-		n.BackgroundTransparency = 0.3
-		n.TextTransparency = 0.3
-		wait(0.1)
-		n.BackgroundTransparency = 0.2
-		n.TextTransparency = 0.2
-		wait(0.1)
-		n.BackgroundTransparency = 0.1
-		n.TextTransparency = 0.1
-		wait(0.1)
-		n.BackgroundTransparency = 0
-		n.TextTransparency = 0
-		wait(0.1)
-		wait(2)
-		n.BackgroundTransparency = 0
-		n.TextTransparency = 0
-		wait(0.1)
-		n.BackgroundTransparency = 0.1
-		n.TextTransparency = 0.1
-		wait(0.1)
-		n.BackgroundTransparency = 0.2
-		n.TextTransparency = 0.2
-		wait(0.1)
-		n.BackgroundTransparency = 0.3
-		n.TextTransparency = 0.3
-		wait(0.1)
-		n.BackgroundTransparency = 0.4
-		n.TextTransparency = 0.4
-		wait(0.1)
-		n.BackgroundTransparency = 0.5
-		n.TextTransparency = 0.5
-		wait(0.1)
-		n.BackgroundTransparency = 0.6
-		n.TextTransparency = 0.6
-		wait(0.1)
-		n.BackgroundTransparency = 0.7
-		n.TextTransparency = 0.7
-		wait(0.1)
-		n.BackgroundTransparency = 0.8
-		n.TextTransparency = 0.8
-		wait(0.1)
-		n.BackgroundTransparency = 0.9
-		n.TextTransparency = 0.9
-		wait(0.1)
-		n.BackgroundTransparency = 1
-		n.TextTransparency = 1
-		wait(0.1)
-	end)
-end
-coroutine.wrap(MOUWPVK_fake_script)()
-local function AIOCU_fake_script() -- Close.LocalScript 
-	local script = Instance.new('LocalScript', Close)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local screen = script.Parent.Parent.Parent.Parent.ScreenGui
-		screen.Enabled = false
-	end)
-	
-	
-end
-coroutine.wrap(AIOCU_fake_script)()
-local function YKCZCLN_fake_script() -- TextButton.LocalScript 
-	local script = Instance.new('LocalScript', TextButton)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local box = script.Parent.Parent.Parent.franko.TextLabel.TextBox
-		if box.Text == "E36N9OPAFXO8IOPS72S" then
-			script.Parent.Parent.Parent.franko:Destroy()
-			
-		
-		else
-		
-		local player = game.Players.LocalPlayer
-		player:Kick("Wrong Key")
-		end
-		
-	end)
-end
-coroutine.wrap(YKCZCLN_fake_script)()
