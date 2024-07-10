@@ -280,7 +280,9 @@ end
 coroutine.wrap(DJJJN_fake_script)()
 local function ZEZMB_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
-
+	
+	local boxy = script.Parent.Parent.Parent.franko
+	boxy.Visible = true
 	script.Parent.MouseButton1Click:Connect(function()
 		local box = script.Parent.Parent.Parent.franko.TextLabel.TextBox
 		if box.Text == "E36N9OPAFXO8IOPS72S" then
