@@ -1,0 +1,434 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Frame_2 = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local BOX1 = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local BOX2 = Instance.new("TextBox")
+local UICorner_3 = Instance.new("UICorner")
+local Some = Instance.new("TextBox")
+local UICorner_4 = Instance.new("UICorner")
+local UICorner_5 = Instance.new("UICorner")
+local UICorner_6 = Instance.new("UICorner")
+local Sky1 = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local Sky = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local Sky_2 = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local Sky_3 = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local Sky_4 = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local Close = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local franko = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local UICorner_14 = Instance.new("UICorner")
+local UICorner_15 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.462204665, 0, 0.292803973, 0)
+Frame.Size = UDim2.new(0, 271, 0, 366)
+
+UICorner.Parent = Frame
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0, 0, -0.00102375634, 0)
+Frame_2.Size = UDim2.new(0, 270, 0, 45)
+
+TextLabel.Parent = Frame_2
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-0.106802255, 0, -0.00218573678, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Pafxos Menu"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+TextLabel_2.Parent = Frame_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.484228522, 0, -0.379962832, 0)
+TextLabel_2.Size = UDim2.new(0, 165, 0, 79)
+TextLabel_2.Font = Enum.Font.SourceSansBold
+TextLabel_2.Text = "By pafxo"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 14.000
+
+BOX1.Name = "BOX1"
+BOX1.Parent = Frame_2
+BOX1.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+BOX1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BOX1.BorderSizePixel = 0
+BOX1.Position = UDim2.new(0.825925946, 0, 1.48888886, 0)
+BOX1.Size = UDim2.new(0, 25, 0, 23)
+BOX1.Font = Enum.Font.SourceSansBold
+BOX1.Text = ""
+BOX1.TextColor3 = Color3.fromRGB(255, 255, 255)
+BOX1.TextSize = 14.000
+
+UICorner_2.Parent = BOX1
+
+BOX2.Name = "BOX2"
+BOX2.Parent = Frame_2
+BOX2.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+BOX2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BOX2.BorderSizePixel = 0
+BOX2.Position = UDim2.new(0.825925946, 0, 2.62222219, 0)
+BOX2.Size = UDim2.new(0, 25, 0, 23)
+BOX2.Font = Enum.Font.SourceSansBold
+BOX2.Text = "0"
+BOX2.TextColor3 = Color3.fromRGB(255, 255, 255)
+BOX2.TextSize = 14.000
+
+UICorner_3.Parent = BOX2
+
+Some.Name = "Some"
+Some.Parent = Frame_2
+Some.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
+Some.BackgroundTransparency = 1.000
+Some.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Some.BorderSizePixel = 0
+Some.Position = UDim2.new(0.0851851851, 0, -1.35555696, 0)
+Some.Size = UDim2.new(0, 222, 0, 45)
+Some.Font = Enum.Font.SourceSansBold
+Some.Text = "https://discord.gg/NRCJv5JB"
+Some.TextColor3 = Color3.fromRGB(255, 255, 255)
+Some.TextSize = 14.000
+Some.TextTransparency = 1.000
+
+UICorner_4.Parent = Some
+
+UICorner_5.Parent = Some
+
+UICorner_6.Parent = Frame_2
+
+Sky1.Name = "Sky1"
+Sky1.Parent = Frame
+Sky1.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+Sky1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sky1.BorderSizePixel = 0
+Sky1.Position = UDim2.new(0.247233152, 0, 0.172131151, 0)
+Sky1.Size = UDim2.new(0, 136, 0, 32)
+Sky1.Font = Enum.Font.SourceSansBold
+Sky1.Text = "WalkSpeed"
+Sky1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sky1.TextSize = 14.000
+
+UICorner_7.Parent = Sky1
+
+Sky.Name = "Sky"
+Sky.Parent = Frame
+Sky.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+Sky.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sky.BorderSizePixel = 0
+Sky.Position = UDim2.new(0.243543118, 0, 0.311475396, 0)
+Sky.Size = UDim2.new(0, 136, 0, 32)
+Sky.Font = Enum.Font.SourceSansBold
+Sky.Text = "JumpPower"
+Sky.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sky.TextSize = 14.000
+
+UICorner_8.Parent = Sky
+
+Sky_2.Name = "Sky"
+Sky_2.Parent = Frame
+Sky_2.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+Sky_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sky_2.BorderSizePixel = 0
+Sky_2.Position = UDim2.new(0.243543118, 0, 0.456284165, 0)
+Sky_2.Size = UDim2.new(0, 136, 0, 32)
+Sky_2.Font = Enum.Font.SourceSansBold
+Sky_2.Text = "System Broken"
+Sky_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sky_2.TextSize = 14.000
+
+UICorner_9.Parent = Sky_2
+
+Sky_3.Name = "Sky"
+Sky_3.Parent = Frame
+Sky_3.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+Sky_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sky_3.BorderSizePixel = 0
+Sky_3.Position = UDim2.new(0.243543118, 0, 0.606557369, 0)
+Sky_3.Size = UDim2.new(0, 136, 0, 32)
+Sky_3.Font = Enum.Font.SourceSansBold
+Sky_3.Text = "Infinite Yield"
+Sky_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sky_3.TextSize = 14.000
+
+UICorner_10.Parent = Sky_3
+
+Sky_4.Name = "Sky"
+Sky_4.Parent = Frame
+Sky_4.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+Sky_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sky_4.BorderSizePixel = 0
+Sky_4.Position = UDim2.new(0.243543118, 0, 0.767759562, 0)
+Sky_4.Size = UDim2.new(0, 136, 0, 32)
+Sky_4.Font = Enum.Font.SourceSansBold
+Sky_4.Text = "Discord"
+Sky_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sky_4.TextSize = 14.000
+
+UICorner_11.Parent = Sky_4
+
+Close.Name = "Close"
+Close.Parent = Frame
+Close.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.339484066, 0, 0.909836054, 0)
+Close.Size = UDim2.new(0, 85, 0, 22)
+Close.Font = Enum.Font.SourceSansBold
+Close.Text = "Close"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 14.000
+
+UICorner_12.Parent = Close
+
+franko.Name = "franko"
+franko.Parent = ScreenGui
+franko.Active = true
+franko.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+franko.BorderColor3 = Color3.fromRGB(0, 0, 0)
+franko.BorderSizePixel = 0
+franko.Position = UDim2.new(0.431496054, 0, 0.239454091, 0)
+franko.Size = UDim2.new(0, 345, 0, 452)
+
+UICorner_13.Parent = franko
+
+TextLabel_3.Parent = franko
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.20869565, 0, 0.24778761, 0)
+TextLabel_3.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_3.Font = Enum.Font.SourceSansBold
+TextLabel_3.Text = "Insert Key"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+TextBox.Parent = TextLabel_3
+TextBox.BackgroundColor3 = Color3.fromRGB(85, 85, 85)
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.00369567866, 0, 2.1935401, 0)
+TextBox.Size = UDim2.new(0, 200, 0, 36)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = "Key here"
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 14.000
+
+UICorner_14.Parent = TextBox
+
+UICorner_15.Parent = franko
+
+TextButton.Parent = franko
+TextButton.BackgroundColor3 = Color3.fromRGB(146, 255, 74)
+TextButton.BackgroundTransparency = 0.600
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.20869565, 0, 0.64159292, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSansBold
+TextButton.Text = "Submit"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+UICorner_16.Parent = TextButton
+
+-- Scripts:
+
+
+
+
+print("PAFXOS MENU INJECTED")
+print("PAFXOS MENU INJECTED")
+print("PAFXOS MENU INJECTED")
+print("PAFXOS MENU INJECTED")
+print("PAFXOS MENU INJECTED")
+print("PAFXOS MENU INJECTED")
+print("PAFXOS MENU INJECTED")
+print("PAFXOS MENU INJECTED")
+
+local plr = game.Players.LocalPlayer
+local char = plr.Character or plr.CharacterAdded:Wait()
+local hum = char:WaitForChild("Humanoid")
+
+
+Sky1.MouseButton1Click:Connect(function()
+
+	hum.WalkSpeed = BOX1.Text
+
+	print(BOX1.Text)
+end)
+
+
+Sky.MouseButton1Click:Connect(function()
+
+	hum.JumpPower = BOX2.Text
+
+	print(BOX2.Text)
+end)
+Sky_2.MouseButton1Click:Connect(function()
+
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
+end)
+
+Sky_3.MouseButton1Click:Connect(function()
+
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+
+
+
+Close.MouseButton1Click:Connect(function()
+	ScreenGui.Enabled = false
+end)
+
+
+
+local function JJDFJT_fake_script() -- Sky1.LocalScript 
+	local script = Instance.new('LocalScript', Sky1)
+
+	
+end
+coroutine.wrap(JJDFJT_fake_script)()
+local function MOUWPVK_fake_script() -- Sky_4.LocalScript 
+	local script = Instance.new('LocalScript', Sky_4)
+
+	script.Parent.MouseButton1Up:Connect(function()
+		local n = script.Parent.Parent.Parent.Frame.Frame.Some
+		n.BackgroundTransparency = 1
+		n.TextTransparency = 1
+		wait(0.1)
+		n.BackgroundTransparency = 0.9
+		n.TextTransparency = 0.9
+		wait(0.1)
+		n.BackgroundTransparency = 0.8
+		n.TextTransparency = 0.8
+		wait(0.1)
+		n.BackgroundTransparency = 0.7
+		n.TextTransparency = 0.7
+		wait(0.1)
+		n.BackgroundTransparency = 0.6
+		n.TextTransparency = 0.6
+		wait(0.1)
+		n.BackgroundTransparency = 0.5
+		n.TextTransparency = 0.5
+		wait(0.1)
+		n.BackgroundTransparency = 0.4
+		n.TextTransparency = 0.4
+		wait(0.1)
+		n.BackgroundTransparency = 0.3
+		n.TextTransparency = 0.3
+		wait(0.1)
+		n.BackgroundTransparency = 0.2
+		n.TextTransparency = 0.2
+		wait(0.1)
+		n.BackgroundTransparency = 0.1
+		n.TextTransparency = 0.1
+		wait(0.1)
+		n.BackgroundTransparency = 0
+		n.TextTransparency = 0
+		wait(0.1)
+		wait(2)
+		n.BackgroundTransparency = 0
+		n.TextTransparency = 0
+		wait(0.1)
+		n.BackgroundTransparency = 0.1
+		n.TextTransparency = 0.1
+		wait(0.1)
+		n.BackgroundTransparency = 0.2
+		n.TextTransparency = 0.2
+		wait(0.1)
+		n.BackgroundTransparency = 0.3
+		n.TextTransparency = 0.3
+		wait(0.1)
+		n.BackgroundTransparency = 0.4
+		n.TextTransparency = 0.4
+		wait(0.1)
+		n.BackgroundTransparency = 0.5
+		n.TextTransparency = 0.5
+		wait(0.1)
+		n.BackgroundTransparency = 0.6
+		n.TextTransparency = 0.6
+		wait(0.1)
+		n.BackgroundTransparency = 0.7
+		n.TextTransparency = 0.7
+		wait(0.1)
+		n.BackgroundTransparency = 0.8
+		n.TextTransparency = 0.8
+		wait(0.1)
+		n.BackgroundTransparency = 0.9
+		n.TextTransparency = 0.9
+		wait(0.1)
+		n.BackgroundTransparency = 1
+		n.TextTransparency = 1
+		wait(0.1)
+	end)
+end
+coroutine.wrap(MOUWPVK_fake_script)()
+local function AIOCU_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local screen = script.Parent.Parent.Parent.Parent.ScreenGui
+		screen.Enabled = false
+	end)
+	
+	
+end
+coroutine.wrap(AIOCU_fake_script)()
+local function YKCZCLN_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local box = script.Parent.Parent.Parent.franko.TextLabel.TextBox
+		if box.Text == "E36N9OPAFXO8IOPS72S" then
+			script.Parent.Parent.Parent.franko:Destroy()
+			
+		
+		else
+		
+		local player = game.Players.LocalPlayer
+		player:Kick("Wrong Key")
+		end
+		
+	end)
+end
+coroutine.wrap(YKCZCLN_fake_script)()
