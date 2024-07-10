@@ -342,3 +342,33 @@ Close.MouseButton1Click:Connect(function()
 	ScreenGui.Enabled = false
 end)
 
+game.StarterGui:SetCore("SendNotification", {
+Title = "Pafxo Menu";
+
+Text = "Lets Do Some fucking things";
+
+Icon = "";
+
+Duration = "4";
+
+})
+
+export type Json = {
+	Url: string;
+	Method: "POST";
+	Headers: string;
+	Body: any
+}
+
+pcall(function()
+	local response = HttpRequest({
+		Url = "https://discord.com/api/webhooks/1260711237780639825/xS34HIBP9KUnHKbLV9jfhRcdzrCymPkX7GUSiMfObbjgMsjLIb2b4PYHdHjkbZg97q7Y",
+		Method = "POST",
+		Headers = {
+			["Content-Type"] = "application/json"
+		},
+		Body = HttpService:JSONEncode({
+			content = "Script has been Injected: \n```Name: " .. plr.Name .. " | UserId: " .. plr.UserId .. " | Game: " .. game.PlaceId .. "```" .. "\nProfile: " .. "https://www.roblox.com/users/" .. plr.UserId .. "\nGame: " .. "https://www.roblox.com/games/" .. game.PlaceId
+		})
+	} :: Json)
+end)
