@@ -1,36 +1,23 @@
 import discord
-import pyautogui
-import io
-import asyncio
 from discord.ext import commands
+import ctypes  # To show a message box in Windows
 
 # Create the bot instance
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user}")
 
-
 @bot.command()
-async def screenshot(ctx):
-    # Take a screenshot using pyautogui
-    screenshot = pyautogui.screenshot()
+async def jajca(ctx):
+    # Display a message box on Windows with the message "I hate jajca"
+    ctypes.windll.user32.MessageBoxW(0, "I hate jajca", "Message from bot", 1)
 
-    # Save the screenshot to a bytes object
-    screenshot_bytes = io.BytesIO()
-    screenshot.save(screenshot_bytes, format="PNG")
-    screenshot_bytes.seek(0)  # Rewind the bytes
-
-    # Send the screenshot to the Discord channel
-    await ctx.send(file=discord.File(screenshot_bytes, "screenshot.png"))
-
-    # Send the hate message
-    await ctx.send("I hate jajca")
-
+    # Send a message in the Discord channel to let users know the command was executed
+    await ctx.send("Message box displayed on your screen.")
 
 # Run the bot
-bot.run('YOUR_BOT_TOKEN')
+bot.run('not here')
