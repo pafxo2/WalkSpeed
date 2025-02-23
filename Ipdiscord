@@ -2,7 +2,7 @@ import requests
 from datetime import datetime
 
 # Replace with your Discord webhook URL
-WEBHOOK_URL = 'YOUR_DISCORD_WEBHOOK_URL'
+WEBHOOK_URL = 'https://discord.com/api/webhooks/1329516594887659611/FEgNHjHO6JzJ_AcclPtkHiTKsfZ-gRtz3j0jUlSbv_yAjbUODrj-s-bXCm65tilMBriQ'
 
 # Get the current time
 current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
