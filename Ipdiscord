@@ -1,28 +1,22 @@
 import requests
-import pyautogui
-import time
+from datetime import datetime
 
-# Your Discord Webhook URL
-WEBHOOK_URL = "https://discord.com/api/webhooks/1329516594887659611/FEgNHjHO6JzJ_AcclPtkHiTKsfZ-gRtz3j0jUlSbv_yAjbUODrj-s-bXCm65tilMBriQ"
+# Replace with your Discord webhook URL
+WEBHOOK_URL = 'YOUR_DISCORD_WEBHOOK_URL'
 
-# Screenshot filename
-screenshot_filename = "screenshot.png"
+# Get the current time
+current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-def take_screenshot():
-    # Take a screenshot
-    screenshot = pyautogui.screenshot()
-    screenshot.save(screenshot_filename)
+# Create the payload (message to send)
+payload = {
+    'content': f'Current time: {current_time}'
+}
 
-def send_to_discord():
-    with open(screenshot_filename, "rb") as file:
-        response = requests.post(WEBHOOK_URL, files={"file": file})
-        
-    if response.status_code == 200:
-        print("Screenshot sent successfully!")
-    else:
-        print(f"Failed to send screenshot! Status code: {response.status_code}, Response: {response.text}")
+# Send the message to the Discord webhook
+response = requests.post(WEBHOOK_URL, json=payload)
 
-if __name__ == "__main__":
-    take_screenshot()
-    time.sleep(1)  # Give it a moment to ensure the file is saved
-    send_to_discord()
+# Check if the message was sent successfully
+if response.status_code == 204:
+    print('Message sent successfully!')
+else:
+    print(f'Failed to send message. Status code: {response.status_code}')
